@@ -227,7 +227,7 @@
                         <td>${game.getGenero()}</td>
                         <td>${game.getAniolanzamiento()}</td>
                         <td><a href="modificarDatos.jsp?id=${game.id}"> Modificar</a></td>
-                        <td><a href="eliminarDatos.jsp?id=${game.id}"> Eliminar</a></td>
+                        <td><a href="/EnerG_war_exploded/delete-game?id=${game.id}"> Eliminar</a></td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -251,9 +251,6 @@
 
 
     <!-- ======= Formulario ====== -->
-
-
-
     <section id="testimonials" class="testimonials">
 
         <div class="container" data-aos="zoom-in">
@@ -273,9 +270,7 @@
 
                     <div class="testimonial-item">
 
-
-
-                        <form action="/EnerG_war_exploded" method="get">
+                        <form action="/EnerG_war_exploded/create-game" method="get">
 
 
                             <div class="row">
@@ -283,75 +278,62 @@
 
                                 <div class="col-md-4"></div>
 
-
-
-                            <div class="col-md-4">
-                                <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1">
-                            </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">No.:</label>
+                                    <input type="number" class="form-control" name="id">
+                                </div>
+                                <div class="col-md-4"></div>
 
                                 <div class="col-md-4"></div>
 
+                                <div class="col-md-4">
+                                    <label class="form-label">Nombre:</label>
+                                    <input type="text" class="form-control" name="nombre">
+                                </div>
+                                <div class="col-md-4"></div>
 
                                 <div class="col-md-4"></div>
 
-
-                            <div class="col-md-4">
-                                <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-                            </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Descripción:</label>
+                                    <textarea class="form-control" name="descripcion" rows="4"></textarea>
+                                </div>
+                                <div class="col-md-4"></div>
 
                                 <div class="col-md-4"></div>
 
-
+                                <div class="col-md-4">
+                                    <label  class="form-label">Creador:</label>
+                                    <input type="text" class="form-control" name="creador">
+                                </div>
+                                <div class="col-md-4"></div>
 
                                 <div class="col-md-4"></div>
 
-                            <div class="col-md-4">
-                                <label for="exampleFormControlInput1" class="form-label">Creador:</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1">
-                            </div>
-
+                                <div class="col-md-4">
+                                    <label  class="form-label">Género:</label>
+                                    <input type="text" class="form-control" name="genero">
+                                </div>
+                                <div class="col-md-4"></div>
 
                                 <div class="col-md-4"></div>
 
-
-
-                                <div class="col-md-4"></div>
-
-                            <div class="col-md-4">
-                                <label for="exampleFormControlInput1" class="form-label">Género:</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1">
-                            </div>
-
-                                <div class="col-md-4"></div>
-
-
-                                <div class="col-md-4"></div>
-
-                            <div class="col-md-4">
-                                <label for="exampleFormControlInput1" class="form-label">año de lanzamiento</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1">
-                            </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">año de lanzamiento</label>
+                                    <input type="text" class="form-control" name="anio">
+                                </div>
 
 
                                 <div class="col-md-4"></div>
 
                             </div>
 
+                            <br>
+                            <br>
 
-
-
-                            <input class="btn btn-dark" type="button" value="Crear">
+                            <input class="btn btn-dark" type="button" value="Actualizar">
 
                         </form>
-
-
-
-
-
-
-
 
                     </div>
 

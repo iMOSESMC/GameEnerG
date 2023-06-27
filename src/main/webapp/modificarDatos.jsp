@@ -1,3 +1,6 @@
+<%@ page import="com.game.energ.models.Games" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -82,9 +85,17 @@
                 <p class="testimonial-item">Modificar recomendaciones</p>
 
             </div>
+            <% List<Games> games = (ArrayList) request.getSession().getAttribute("games");
+                int id = Integer.parseInt(request.getParameter("id"));
+                Games game = new Games();
+                for(Games g : games){
+                    if(g.getId() == id){
+                        game = g;
+                    }
+                }
+            %>
 
-
-            <form action="/EnerG_war_exploded" method="get">
+            <form action="/EnerG_war_exploded/update-game" method="get">
 
 
                 <div class="row">
@@ -92,55 +103,49 @@
 
                     <div class="col-md-4"></div>
 
-
-
                     <div class="col-md-4">
-                        <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                        <label class="form-label">No.:</label>
+                        <input type="number" class="form-control" name="id" value="<%= game.getId()%>">
                     </div>
-
                     <div class="col-md-4"></div>
 
-
                     <div class="col-md-4"></div>
-
 
                     <div class="col-md-4">
-                        <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                        <label class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" name="nombre" value="<%= game.getNombre()%>">
                     </div>
-
                     <div class="col-md-4"></div>
-
-
 
                     <div class="col-md-4"></div>
 
                     <div class="col-md-4">
-                        <label for="exampleFormControlInput1" class="form-label">Creador:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                        <label class="form-label">Descripción:</label>
+                        <textarea class="form-control" name="descripcion" value =" <%= game.getDescripcion() %>" rows="4"></textarea>
                     </div>
-
-
                     <div class="col-md-4"></div>
-
-
 
                     <div class="col-md-4"></div>
 
                     <div class="col-md-4">
-                        <label for="exampleFormControlInput1" class="form-label">Género:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                        <label  class="form-label">Creador:</label>
+                        <input type="text" class="form-control" name="creador" value="<%= game.getCreador()%>">
                     </div>
-
                     <div class="col-md-4"></div>
-
 
                     <div class="col-md-4"></div>
 
                     <div class="col-md-4">
-                        <label for="exampleFormControlInput1" class="form-label">año de lanzamiento</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                        <label  class="form-label">Género:</label>
+                        <input type="text" class="form-control" name="genero" value="<%= game.getGenero()%>">
+                    </div>
+                    <div class="col-md-4"></div>
+
+                    <div class="col-md-4"></div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">año de lanzamiento</label>
+                        <input type="text" class="form-control" name="anio" value="<%= game.getAniolanzamiento()%>">
                     </div>
 
 
