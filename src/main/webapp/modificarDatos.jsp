@@ -1,4 +1,3 @@
-<%@ page import="com.game.energ.models.Games" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -119,7 +118,7 @@
 
                     <div class="col-md-4">
                         <label for="exampleFormControlInput1" class="form-label">Creador:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput2">
+                        <input type="email" class="form-control" id="exampleFormControlInput1">
                     </div>
 
 
@@ -131,7 +130,7 @@
 
                     <div class="col-md-4">
                         <label for="exampleFormControlInput1" class="form-label">Género:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput3">
+                        <input type="email" class="form-control" id="exampleFormControlInput1">
                     </div>
 
                     <div class="col-md-4"></div>
@@ -141,7 +140,7 @@
 
                     <div class="col-md-4">
                         <label for="exampleFormControlInput1" class="form-label">año de lanzamiento</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput4">
+                        <input type="email" class="form-control" id="exampleFormControlInput1">
                     </div>
 
 
@@ -212,4 +211,4 @@
     <script src="assets/js/main.js"></script>
 </div>
 </body>
-</html>
+

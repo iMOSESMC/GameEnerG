@@ -1,8 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>GAME-ENERG</title>
@@ -26,6 +28,14 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+
+
+
+    <script>
+
+
+
+    </script>
 
 </head>
 <body>
@@ -68,6 +78,7 @@
 
     <!-- ======= PARTE ALTA ======= -->
     <section id="hero" class="d-flex align-items-center justify-content-center">
+
         <div class="container" data-aos="fade-up">
 
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
@@ -148,6 +159,7 @@
             </div>
 
         </div>
+
     </section><!---->
 
 
@@ -203,9 +215,10 @@
                     <th>Año de Lanzamiento</th>
                 </tr>
                 </thead>
-                <tbody>
-                <c:forEach items="${games}" var="game">
 
+                <tbody>
+
+                <c:forEach items="${games}" var="game">
                     <tr>
                         <td>${game.getId()}</td>
                         <td>${game.getNombre()}</td>
@@ -218,7 +231,9 @@
                     </tr>
                 </c:forEach>
                 </tbody>
+
             </table>
+
             <a class="btn-primary" href="hello-servlet">VER</a>
 
 
@@ -248,37 +263,100 @@
 
                 <h2>Recomendaciónes</h2>
 
-                <p class="testimonial-item">Puedes recomendar a la gente los videojuegos de tu agrado!</p>
+                <p class="testimonial-item">Puedes recomendar a la gente los videojuegos de tu agrado</p>
 
             </div>
 
             <div class="swiper-wrapper">
+
                 <div class="swiper-slide">
+
                     <div class="testimonial-item">
 
 
 
                         <form action="/EnerG_war_exploded" method="get">
 
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Nombre del videojuego:</label>
+
+                            <div class="row">
+
+
+                                <div class="col-md-4"></div>
+
+
+
+                            <div class="col-md-4">
+                                <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1">
+                            </div>
+
+                                <div class="col-md-4"></div>
+
+
+                                <div class="col-md-4"></div>
+
+
+                            <div class="col-md-4">
+                                <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                            </div>
+
+                                <div class="col-md-4"></div>
+
+
+
+                                <div class="col-md-4"></div>
+
+                            <div class="col-md-4">
+                                <label for="exampleFormControlInput1" class="form-label">Creador:</label>
                                 <input type="email" class="form-control" id="exampleFormControlInput1">
                             </div>
 
 
-                            <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                                <div class="col-md-4"></div>
+
+
+
+                                <div class="col-md-4"></div>
+
+                            <div class="col-md-4">
+                                <label for="exampleFormControlInput1" class="form-label">Género:</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1">
                             </div>
+
+                                <div class="col-md-4"></div>
+
+
+                                <div class="col-md-4"></div>
+
+                            <div class="col-md-4">
+                                <label for="exampleFormControlInput1" class="form-label">año de lanzamiento</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1">
+                            </div>
+
+
+                                <div class="col-md-4"></div>
+
+                            </div>
+
+
+
 
                             <input class="btn btn-dark" type="button" value="Crear">
 
                         </form>
 
 
+
+
+
+
+
+
                     </div>
 
                 </div>
+
             </div>
         </div>
     </section>
